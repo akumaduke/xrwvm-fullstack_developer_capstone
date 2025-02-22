@@ -2,6 +2,7 @@
 # import requests
 import os
 from dotenv import load_dotenv
+import requests
 
 load_dotenv()
 
@@ -11,6 +12,50 @@ sentiment_analyzer_url = os.getenv(
     'sentiment_analyzer_url',
     default="http://localhost:5050/")
 
+# def get_request(endpoint, **kwargs):
+#      params = "&".join(f"{key}={value}" for key, value in kwargs.items() if value)
+
+#     # Ajoute '?' uniquement si params n'est pas vide
+#     request_url = f"{backend_url}{endpoint}{'?' + params if params else ''}"
+    
+
+#     print(f"GET from {request_url}")
+#     # params = ""
+#     # if(kwargs):
+#     #     for key,value in kwargs.items():
+#     #         params=params+key+"="+value+"&"
+
+#     # request_url = backend_url+endpoint+"?"+params
+    
+#     print("GET from {} ".format(request_url))
+#     try:
+#         # Call get method of requests library with URL and parameters
+#         response = requests.get(request_url)
+#         return response.json()
+#     except:
+#         # If any error occurs
+#         print("Network exception occurred")
+# def get_request(endpoint, **kwargs):
+#     params = "&".join(f"{key}={value}" for key, value in kwargs.items() if value)
+
+#     # Ajoute '?' uniquement si params n'est pas vide
+#     if params:
+#         request_url = f"{backend_url}{endpoint}?{params}"
+#     else:
+#         request_url = f"{backend_url}{endpoint}"
+
+#     print(f"GET from {request_url}")
+
+#     try:
+#         # Call get method of requests library with URL and parameters
+#         response = requests.get(request_url)
+#         return response.json()
+#     except requests.RequestException as e:
+#         # If any error occurs
+#         print(f"Network exception occurred: {e}")
+#         return None  # Retourne None en cas d'erreur
+# def get_request(endpoint, **kwargs):
+# Add code for get requests to back end
 def get_request(endpoint, **kwargs):
     params = ""
     if(kwargs):
@@ -27,8 +72,6 @@ def get_request(endpoint, **kwargs):
     except:
         # If any error occurs
         print("Network exception occurred")
-# def get_request(endpoint, **kwargs):
-# Add code for get requests to back end
 def analyze_review_sentiments(text):
     request_url = sentiment_analyzer_url+"analyze/"+text
     try:

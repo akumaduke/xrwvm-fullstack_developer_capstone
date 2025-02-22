@@ -6,10 +6,10 @@ import review_icon from "../assets/reviewicon.png"
 
 const Dealers = () => {
   const [dealersList, setDealersList] = useState([]);
-  // let [state, setState] = useState("")
+  let [state, setState] = useState("")
   let [states, setStates] = useState([])
 
-  // let root_url = window.location.origin
+   let root_url = window.location.origin
   let dealer_url ="/djangoapp/get_dealers";
   
   let dealer_url_by_state = "/djangoapp/get_dealers/";
