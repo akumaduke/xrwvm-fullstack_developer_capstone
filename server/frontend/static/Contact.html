@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us - Dealerships</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <script src="/static/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Custom Styling */
+        .contact-container {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        .contact-info {
+            background: #17a2b8;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .contact-info h3, .contact-info p {
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkturquoise; height: 1in;">
+        <div class="container-fluid">
+            <h2 style="padding-right: 5%;">Dealerships</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4 contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+                <p><strong>Email:</strong> support@dealerships.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Working Hours:</strong> Mon-Fri, 9AM - 6PM</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps Placeholder -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Find Us</h3>
+                <div class="map-container">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
